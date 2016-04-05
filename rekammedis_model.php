@@ -999,6 +999,17 @@ public function cari_agustine($offset)
             return FALSE;
         }
     }
+	public function hapus2($kode_rekam)
+    {
+        $this->db->where('kode_rekam', $kode_rekam)->delete($this->db_tabel);
+
+        if($this->db->affected_rows() > 0)
+        {
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
 }
-/* End of file siswa_model.php */
-/* Location: ./application/models/siswa_model.php */
